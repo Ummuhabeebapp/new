@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for image resizing */
+       
+        
+        .div{
+            height: 200px;
+            width: 200px;
+        }
+        img{height: 200px;
+            width: 200px;
+        
+        }
+    </style>
+</head>
+<body>
+
+    <div >
+      
+        <img class="d-block " src="carrobo.webp" alt="First slide" id="myModal">
+    </div>
+      
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+  var data = null; // Or undefined, empty, etc.
+
+var myModal = document.getElementById('myModal');
+myModal.addEventListener('show.bs.modal', function (event) {
+  if (!data) {
+    alert('Data is missing! Modal will not open.');
+    return event.preventDefault();
+  }
+});
+</script>
+</body>
+</html>
