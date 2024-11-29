@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Effect with Bootstrap 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .shadow-box {
+      position: relative; /* Positioning relative to allow absolute positioning inside */
+    }
+    .shadow-layer {
+      position: absolute;
+      top: 10px; /* Adjust for shadow offset */
+      left: 10px; /* Adjust for shadow offset */
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+      border-radius: 0.5rem; /* Matches inner div's border radius */
+      z-index: 0; /* Ensure it's beneath the main content */
+    }
+    .main-content {
+      position: relative;
+      z-index: 1; /* Ensure this is above the shadow layer */
+      background-color: white;
+      border-radius: 0.5rem; /* Rounded corners */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 d-flex justify-content-center">
+    <div class="shadow-box">
+      <div class="shadow-layer"></div>
+      <div class="main-content">
+        Main Content Div
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
